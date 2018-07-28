@@ -1,0 +1,33 @@
+<html>
+<head>
+
+<title>Operators and Arithmetic Expression</title>
+
+<script>
+
+var p=1000;
+var r=10;
+var n=1;
+var ci;
+
+document.write("<pre>")
+document.write("<code>---------------------------------------</code><br>")
+document.write("<code>******Calculate Compound Interest******</code><br>")
+document.write("<code>---------------------------------------</code><br>")
+
+document.write("<code>Principal 		- 	"+p+" rs</code><br>")
+document.write("<code>Rate of Interest 	- 	"+r+"%</code><br>")
+document.write("<code>Period 			- 	"+n+" yr</code><br>")
+
+ci=(p*(Math.pow(1+(r/100),n)))-p
+
+document.write("Compound Interest       - 	"+ci+"<br>")
+
+document.write("</pre>")
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

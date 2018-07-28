@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Loan Information</title>
+</head>
+
+<script>
+function calculatePayment()
+    {
+        var amount=document.forms["loaninfo"]["amount"].value;
+        var roi=document.forms["loaninfo"]["roi"].value;
+        var repayment=document.forms["loaninfo"]["repayment"].value; 
+		
+		if(amount>150000)
+		{
+			window.alert("Amount should not be Greater than 15 Lakhs");
+		}
+		
+		if(!(7<repayment<15))
+		{
+			window.alert("Repayment Period should be between 7 to 15 Years");
+		}
+    }
+</script>
+
+<body>
+<h2>Enter Loan Information</h2>
+<form id="loaninfo" name="loaninfo" onsubmit="calculatePayment()">
+<table>
+<tr>
+	<td>1) Amount of the loan(any currency):</td>
+	<td><input type="text" size="05" id="amount" name="amount" max=1500000></td>
+</tr>
+<tr>
+	<td>2) Annual Percentage Rate of Interest:</td>
+	<td><input type="text" size="05" id="roi" name="roi"></td>
+</tr>
+<tr>
+	<td>3) Repayment period in years:</td>
+	<td><input type="text" size="05" id="repayment" name="repayment" min=7 max=15></td>
+</tr>
+<tr>
+	<td><input type="submit" value="Compute"></td>
+</tr>
+<tr></tr>
+<tr></tr>
+<tr><td><h2>Payment Information:</h2></td></tr>
+<tr>
+	<td>4) Your monthly payment will be:</td>
+	<td><input type="text" size="05" id="monthlypayment" name="monthlypayment"></td>
+</tr>
+<tr>
+	<td>5) Your total payment will be:</td>
+	<td><input type="text" size="05" id="totalpayment" name="totalpayment"></td>
+</tr>
+<tr>
+	<td>6) Your total interest payments will be:</td>
+	<td><input type="text" size="05" id="totalinterest" name="totalinterest"></td>
+</tr>
+</table>
+</body>
+</html>

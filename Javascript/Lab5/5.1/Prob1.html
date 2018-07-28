@@ -1,0 +1,51 @@
+<html>
+<head>
+<title> Window Example </title>
+</head>
+<script>
+function nwindow()
+{
+/*TODO:  get the height, width, left and top from the form object and pass the values to open method of window along with the name of the html file to be opened in the new window.*/
+document.getElementById("frmlab").submit();
+
+var vwidth=document.forms["frmlab"]["width"].value;
+var vheight=document.forms["frmlab"]["height"].value;
+var vleft=document.forms["frmlab"]["left"].value;
+var vtop=document.forms["frmlab"]["top"].value;
+
+window.open("Prob2.html", "_blank", "toolbar=yes","top=vtop,left=vleft,width=vwidth,height=vheight");
+//window.open("Prob2.html","_blank","toolbar=yes,top=223,left=223,width=223,height=223");
+}
+</script>
+<body >
+<form id="frmlab" name="frmlab" onsubmit="return nwindow()">
+<table border="1" cellspacing="8" cellpadding="10" bordercolor="blue">
+<tr>
+	<th colspan="4">Create a new window</th>
+</tr>
+<tr>
+	<td colspan="4"><center>Window Size</center></td>
+</tr>
+<tr>
+	<td><b>Width:</b></td>
+	<td><input id="width" type="text" size="3" name="width"></td>
+	<td><b>Height:</b></td>
+	<td><input id="height" type="text" size="3" name="height"></td>
+</tr>
+<tr>
+	<td colspan="4"><center>POSITION</center></td>
+</tr>
+<tr>
+	<td><b>Left:</b></td>
+	<td><input id="left" type="text" size="3" name="left"></td>
+	<td><b>Top:</b></td>
+	<td><input id="top"s type="text" size="3" name="top"></td>
+</tr>
+<tr>
+	<td colspan="3"><center><input type="submit" value="New Window"></center></td>
+	<td><input type="reset" value="Reset"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Displaying Products</title>
+
+<script>
+ function validateForm()
+    {
+        var barbiedoll=document.forms["Products"]["barbiedoll"].value;
+        var calculator=document.forms["Products"]["calculator"].value;
+        var mobilephone=document.forms["Products"]["mobilephone"].value;
+        var lgdvd=document.forms["Products"]["lgdvd"].value;
+        if ((barbiedoll==null || barbiedoll=="")&&(calculator==null || calculator=="")&&(mobilephone==null || mobilephone=="")&&(lgdvd==null || lgdvd==""))
+        {
+            window.confirm("No Item Selected");
+            return false;
+        }
+    }
+</script>
+</head>
+
+<body bgcolor="aqua">
+
+<h1>PRODUCTS</h1>
+<form name="Products" id="products" method="POST" onsubmit="return validateForm()" action="Prob1_DisplayInvoice.html">
+<table border="2px">
+<th>Name</th>
+<th>Description</th>
+<th>Price</th>
+<th>Quantity</th>
+
+<tr>
+	<td>Barbie Doll</td>
+	<td>Beautiful</td>
+	<td>20</td>
+	<td><input id="barbiedoll" name="barbiedoll" type="text" size="15"></td>
+</tr>
+<tr>
+	<td>Calculator</td>
+	<td>Calculator with different features</td>
+	<td>30</td>
+	<td><input id="calculator" name="calculator" type="text" size="15"></td>
+</tr>
+<tr>
+	<td>Mobile Phone</td>
+	<td>Camera,Java Games,GPRS</td>
+	<td>40</td>
+	<td><input id="mobilephone" name="mobilephone" type="text" size="15"></td>
+</tr>
+<tr>
+	<td>LG DVD</td>
+	<td>5 Disc Charger</td>
+	<td>50</td>
+	<td><input id="lgdvd" name="lgdvd" type="text" size="15"></td>
+</tr>
+</table>
+<input type="submit" value="ORDER" onsubmit="validateForm()">
+</form>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<html>
+<head><title>Displaying Date using Date Object</title>
+<script>
+
+var d = new Date();
+
+var hours=d.getHours();
+
+document.write("<b>"+d+"</b><br><br>");
+
+if(hours<12)
+	document.write("<b>Good Morning</b>");
+else if(hours>=12&&hours<=17)
+	document.write("<b>Good Afternoon</b>")
+else if(hours>17)
+	document.write("<b>Good Evening</b>")
+else
+	document.write("<b>Good Night</b>")
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
